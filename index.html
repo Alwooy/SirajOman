@@ -1696,6 +1696,13 @@
     @media (prefers-reduced-motion: reduce) {
       .cflow__item, .cflow__dot { transition: none; }
     }
+
+    .vmodal { position: fixed; inset: 0; z-index: 200; display: flex; align-items: center; justify-content: center; padding: 20px; background: rgba(10, 6, 3, .88); backdrop-filter: blur(6px); }
+    .vmodal[hidden] { display: none; }
+    .vmodal__box { position: relative; width: min(92vw, 420px); max-height: 92vh; }
+    .vmodal__box video { display: block; width: 100%; max-height: 86vh; border-radius: 14px; background: #000; box-shadow: 0 30px 80px -20px rgba(0,0,0,.8); }
+    .vmodal__close { position: absolute; top: -14px; inset-inline-start: -14px; z-index: 2; width: 38px; height: 38px; border-radius: 50%; border: 1px solid rgba(227,194,136,.6); background: #24150A; color: var(--cream); font-size: 16px; cursor: pointer; }
+    .btn--play svg { color: var(--gold); }
   </style>
 </head>
 <body>
@@ -1763,6 +1770,10 @@
               <path d="M12 4v15M6 13l6 6 6-6"/>
             </svg>
           </a>
+          <button class="btn btn--ghost btn--play" type="button" id="openLaunch" aria-haspopup="dialog">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13l11-6.5-11-6.5Z"/></svg>
+            الفيديو الافتتاحي
+          </button>
           <a class="btn btn--ghost" href="#vision">
             رؤية عُمان ٢٠٤٠
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -1946,10 +1957,10 @@
         </div>
         <ul class="vlist vlist--wide reveal">
             <li class="vitem">
-              <button class="vitem__btn" type="button" aria-expanded="false" aria-controls="vp-41">
+              <button class="vitem__btn" type="button" aria-expanded="false" aria-controls="vp-40">
                 <span class="vitem__play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l11-6.5z"/></svg></span><span class="vitem__title">علوم البيئات المحلية</span><span class="vitem__dur">١:٣٨</span><svg class="vitem__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
               </button>
-              <div class="vitem__panel" id="vp-41" hidden>
+              <div class="vitem__panel" id="vp-40" hidden>
                 <div class="vcard__frame">
                   <video controls preload="none" playsinline poster="posters/lessons-environments.jpg" aria-label="علوم البيئات المحلية">
                     <source src="videos/lessons-environments.mp4" type="video/mp4">
@@ -1959,10 +1970,10 @@
               </div>
             </li>
             <li class="vitem">
-              <button class="vitem__btn" type="button" aria-expanded="false" aria-controls="vp-42">
+              <button class="vitem__btn" type="button" aria-expanded="false" aria-controls="vp-41">
                 <span class="vitem__play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l11-6.5z"/></svg></span><span class="vitem__title">ألعاب ورياضات عُمانية</span><span class="vitem__dur">١:٣٤</span><svg class="vitem__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
               </button>
-              <div class="vitem__panel" id="vp-42" hidden>
+              <div class="vitem__panel" id="vp-41" hidden>
                 <div class="vcard__frame">
                   <video controls preload="none" playsinline poster="posters/lessons-games.jpg" aria-label="ألعاب ورياضات عُمانية">
                     <source src="videos/lessons-games.mp4" type="video/mp4">
@@ -1972,10 +1983,10 @@
               </div>
             </li>
             <li class="vitem">
-              <button class="vitem__btn" type="button" aria-expanded="false" aria-controls="vp-43">
+              <button class="vitem__btn" type="button" aria-expanded="false" aria-controls="vp-42">
                 <span class="vitem__play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l11-6.5z"/></svg></span><span class="vitem__title">خبز ولبن</span><span class="vitem__dur">٢:٣٤</span><svg class="vitem__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
               </button>
-              <div class="vitem__panel" id="vp-43" hidden>
+              <div class="vitem__panel" id="vp-42" hidden>
                 <div class="vcard__frame">
                   <video controls preload="none" playsinline poster="posters/vol6-bread-laban.jpg" aria-label="خبز ولبن">
                     <source src="videos/vol6-bread-laban.mp4" type="video/mp4">
@@ -1985,10 +1996,10 @@
               </div>
             </li>
             <li class="vitem">
-              <button class="vitem__btn" type="button" aria-expanded="false" aria-controls="vp-44">
+              <button class="vitem__btn" type="button" aria-expanded="false" aria-controls="vp-43">
                 <span class="vitem__play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l11-6.5z"/></svg></span><span class="vitem__title">ربط دروس الموسوعة بالطيور</span><span class="vitem__dur">١:٤٢</span><svg class="vitem__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
               </button>
-              <div class="vitem__panel" id="vp-44" hidden>
+              <div class="vitem__panel" id="vp-43" hidden>
                 <div class="vcard__frame">
                   <video controls preload="none" playsinline poster="posters/lessons-birds.jpg" aria-label="ربط دروس الموسوعة بالطيور">
                     <source src="videos/lessons-birds.mp4" type="video/mp4">
@@ -2014,10 +2025,10 @@
         </div>
         <ul class="vlist vlist--wide reveal">
             <li class="vitem">
-              <button class="vitem__btn" type="button" aria-expanded="false" aria-controls="vp-45">
+              <button class="vitem__btn" type="button" aria-expanded="false" aria-controls="vp-44">
                 <span class="vitem__play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="4.5" width="17" height="12" rx="1.6"/><path d="M12 16.5V20M8 20h8"/></svg></span><span class="vitem__title">ألعاب ورياضات عُمانية</span><span class="vitem__dur">٩ شريحة</span><svg class="vitem__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
               </button>
-              <div class="vitem__panel" id="vp-45" hidden>
+              <div class="vitem__panel" id="vp-44" hidden>
                 <div class="deck" data-dir="slides/games" data-files="s-1.jpg,s-2.jpg,s-3.jpg,s-4.jpg,s-5.jpg,s-6.jpg,s-7.jpg,s-8.jpg,s-9.jpg" aria-label="ألعاب ورياضات عُمانية">
                   <div class="deck__stage"><img class="deck__img" alt="ألعاب ورياضات عُمانية" decoding="async"></div>
                   <div class="deck__bar">
@@ -2029,10 +2040,10 @@
               </div>
             </li>
             <li class="vitem">
-              <button class="vitem__btn" type="button" aria-expanded="false" aria-controls="vp-46">
+              <button class="vitem__btn" type="button" aria-expanded="false" aria-controls="vp-45">
                 <span class="vitem__play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="4.5" width="17" height="12" rx="1.6"/><path d="M12 16.5V20M8 20h8"/></svg></span><span class="vitem__title">الأكلات الشعبية</span><span class="vitem__dur">١١ شريحة</span><svg class="vitem__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
               </button>
-              <div class="vitem__panel" id="vp-46" hidden>
+              <div class="vitem__panel" id="vp-45" hidden>
                 <div class="deck" data-dir="slides/foods" data-files="s-01.jpg,s-02.jpg,s-03.jpg,s-04.jpg,s-05.jpg,s-06.jpg,s-07.jpg,s-08.jpg,s-09.jpg,s-10.jpg,s-11.jpg" aria-label="الأكلات الشعبية">
                   <div class="deck__stage"><img class="deck__img" alt="الأكلات الشعبية" decoding="async"></div>
                   <div class="deck__bar">
@@ -2044,10 +2055,10 @@
               </div>
             </li>
             <li class="vitem">
-              <button class="vitem__btn" type="button" aria-expanded="false" aria-controls="vp-47">
+              <button class="vitem__btn" type="button" aria-expanded="false" aria-controls="vp-46">
                 <span class="vitem__play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="4.5" width="17" height="12" rx="1.6"/><path d="M12 16.5V20M8 20h8"/></svg></span><span class="vitem__title">الأفلاج</span><span class="vitem__dur">١٠ شريحة</span><svg class="vitem__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
               </button>
-              <div class="vitem__panel" id="vp-47" hidden>
+              <div class="vitem__panel" id="vp-46" hidden>
                 <div class="deck" data-dir="slides/aflaj" data-files="s-01.jpg,s-02.jpg,s-03.jpg,s-04.jpg,s-05.jpg,s-06.jpg,s-07.jpg,s-08.jpg,s-09.jpg,s-10.jpg" aria-label="الأفلاج">
                   <div class="deck__stage"><img class="deck__img" alt="الأفلاج" decoding="async"></div>
                   <div class="deck__bar">
@@ -2059,10 +2070,10 @@
               </div>
             </li>
             <li class="vitem">
-              <button class="vitem__btn" type="button" aria-expanded="false" aria-controls="vp-48">
+              <button class="vitem__btn" type="button" aria-expanded="false" aria-controls="vp-47">
                 <span class="vitem__play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="4.5" width="17" height="12" rx="1.6"/><path d="M12 16.5V20M8 20h8"/></svg></span><span class="vitem__title">الحارات العُمانية</span><span class="vitem__dur">١٠ شريحة</span><svg class="vitem__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
               </button>
-              <div class="vitem__panel" id="vp-48" hidden>
+              <div class="vitem__panel" id="vp-47" hidden>
                 <div class="deck" data-dir="slides/harat" data-files="s-01.jpg,s-02.jpg,s-03.jpg,s-04.jpg,s-05.jpg,s-06.jpg,s-07.jpg,s-08.jpg,s-09.jpg,s-10.jpg" aria-label="الحارات العُمانية">
                   <div class="deck__stage"><img class="deck__img" alt="الحارات العُمانية" decoding="async"></div>
                   <div class="deck__bar">
@@ -2074,10 +2085,10 @@
               </div>
             </li>
             <li class="vitem">
-              <button class="vitem__btn" type="button" aria-expanded="false" aria-controls="vp-49">
+              <button class="vitem__btn" type="button" aria-expanded="false" aria-controls="vp-48">
                 <span class="vitem__play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="4.5" width="17" height="12" rx="1.6"/><path d="M12 16.5V20M8 20h8"/></svg></span><span class="vitem__title">العيون</span><span class="vitem__dur">١٠ شريحة</span><svg class="vitem__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
               </button>
-              <div class="vitem__panel" id="vp-49" hidden>
+              <div class="vitem__panel" id="vp-48" hidden>
                 <div class="deck" data-dir="slides/uyun" data-files="s-01.jpg,s-02.jpg,s-03.jpg,s-04.jpg,s-05.jpg,s-06.jpg,s-07.jpg,s-08.jpg,s-09.jpg,s-10.jpg" aria-label="العيون">
                   <div class="deck__stage"><img class="deck__img" alt="العيون" decoding="async"></div>
                   <div class="deck__bar">
@@ -2089,10 +2100,10 @@
               </div>
             </li>
             <li class="vitem">
-              <button class="vitem__btn" type="button" aria-expanded="false" aria-controls="vp-50">
+              <button class="vitem__btn" type="button" aria-expanded="false" aria-controls="vp-49">
                 <span class="vitem__play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="4.5" width="17" height="12" rx="1.6"/><path d="M12 16.5V20M8 20h8"/></svg></span><span class="vitem__title">الأودية</span><span class="vitem__dur">١١ شريحة</span><svg class="vitem__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
               </button>
-              <div class="vitem__panel" id="vp-50" hidden>
+              <div class="vitem__panel" id="vp-49" hidden>
                 <div class="deck" data-dir="slides/wadis" data-files="s-01.jpg,s-02.jpg,s-03.jpg,s-04.jpg,s-05.jpg,s-06.jpg,s-07.jpg,s-08.jpg,s-09.jpg,s-10.jpg,s-11.jpg" aria-label="الأودية">
                   <div class="deck__stage"><img class="deck__img" alt="الأودية" decoding="async"></div>
                   <div class="deck__bar">
@@ -2478,7 +2489,7 @@
           </div>
         </section>
 
-        <section class="vol reveal" id="vol-6" aria-label="المجلد السادس: الأكلات التقليدية">
+        <section class="vol reveal" id="vol-6" aria-label="المجلد السادس: التراث والحضارة">
           <div class="vol__head">
             <span class="vol__num" aria-hidden="true">٦</span>
             <div><p class="vol__label">المجلد السادس</p><h3 class="vol__title">التراث والحضارة</h3></div>
@@ -2503,11 +2514,6 @@
                 </div>
               </div>
             </li>
-            <li class="vsub">
-              <h5 class="vsub__h"><button class="vsub__toggle tg" type="button" aria-expanded="false" aria-controls="vs-18">
-                <span class="vsub__title">العمارة التقليدية</span><span class="vol__status vol__status--on">فيديو واحد</span><svg class="tg__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
-              </button></h5>
-              <ul class="vlist vlist--nested" id="vs-18" hidden>
             <li class="vitem">
               <button class="vitem__btn" type="button" aria-expanded="false" aria-controls="vp-17">
                 <span class="vitem__play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l11-6.5z"/></svg></span><span class="vitem__title">القلاع والحصون</span><span class="vitem__dur">١:٣٨</span><svg class="vitem__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
@@ -2521,13 +2527,11 @@
                 </div>
               </div>
             </li>
-              </ul>
-            </li>
             <li class="vitem">
-              <button class="vitem__btn" type="button" aria-expanded="false" aria-controls="vp-19">
+              <button class="vitem__btn" type="button" aria-expanded="false" aria-controls="vp-18">
                 <span class="vitem__play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l11-6.5z"/></svg></span><span class="vitem__title">السفن التقليدية</span><span class="vitem__dur">٣:٢٨</span><svg class="vitem__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
               </button>
-              <div class="vitem__panel" id="vp-19" hidden>
+              <div class="vitem__panel" id="vp-18" hidden>
                 <div class="vcard__frame">
                   <video controls preload="none" playsinline poster="posters/vol6-ships.jpg" aria-label="السفن التقليدية">
                     <source src="videos/vol6-ships.mp4" type="video/mp4">
@@ -2537,10 +2541,10 @@
               </div>
             </li>
             <li class="vitem">
-              <button class="vitem__btn" type="button" aria-expanded="false" aria-controls="vp-20">
+              <button class="vitem__btn" type="button" aria-expanded="false" aria-controls="vp-19">
                 <span class="vitem__play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l11-6.5z"/></svg></span><span class="vitem__title">الرحى والسعن</span><span class="vitem__dur">٣:١١</span><svg class="vitem__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
               </button>
-              <div class="vitem__panel" id="vp-20" hidden>
+              <div class="vitem__panel" id="vp-19" hidden>
                 <div class="vcard__frame">
                   <video controls preload="none" playsinline poster="posters/vol6-raha-saan.jpg" aria-label="الرحى والسعن">
                     <source src="videos/vol6-raha-saan.mp4" type="video/mp4">
@@ -2550,10 +2554,10 @@
               </div>
             </li>
             <li class="vitem">
-              <button class="vitem__btn" type="button" aria-expanded="false" aria-controls="vp-21">
+              <button class="vitem__btn" type="button" aria-expanded="false" aria-controls="vp-20">
                 <span class="vitem__play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l11-6.5z"/></svg></span><span class="vitem__title">الدعن والعريش</span><span class="vitem__dur">١:١٣</span><svg class="vitem__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
               </button>
-              <div class="vitem__panel" id="vp-21" hidden>
+              <div class="vitem__panel" id="vp-20" hidden>
                 <div class="vcard__frame">
                   <video controls preload="none" playsinline poster="posters/vol6-dun-areesh.jpg" aria-label="الدعن والعريش">
                     <source src="videos/vol6-dun-areesh.mp4" type="video/mp4">
@@ -2563,10 +2567,10 @@
               </div>
             </li>
             <li class="vitem">
-              <button class="vitem__btn" type="button" aria-expanded="false" aria-controls="vp-22">
+              <button class="vitem__btn" type="button" aria-expanded="false" aria-controls="vp-21">
                 <span class="vitem__play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l11-6.5z"/></svg></span><span class="vitem__title">السعفيات / الخصف</span><span class="vitem__dur">١:٥٠</span><svg class="vitem__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
               </button>
-              <div class="vitem__panel" id="vp-22" hidden>
+              <div class="vitem__panel" id="vp-21" hidden>
                 <div class="vcard__frame">
                   <video controls preload="none" playsinline poster="posters/vol6-saafiyat.jpg" aria-label="السعفيات / الخصف">
                     <source src="videos/vol6-saafiyat.mp4" type="video/mp4">
@@ -2583,10 +2587,10 @@
             </button></h4>
             <ul class="vlist" id="vl-6-1" hidden>
             <li class="vitem">
-              <button class="vitem__btn" type="button" aria-expanded="false" aria-controls="vp-23">
+              <button class="vitem__btn" type="button" aria-expanded="false" aria-controls="vp-22">
                 <span class="vitem__play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l11-6.5z"/></svg></span><span class="vitem__title">الخبز واللبن</span><span class="vitem__dur">٢:٣٤</span><svg class="vitem__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
               </button>
-              <div class="vitem__panel" id="vp-23" hidden>
+              <div class="vitem__panel" id="vp-22" hidden>
                 <div class="vcard__frame">
                   <video controls preload="none" playsinline poster="posters/vol6-bread-laban.jpg" aria-label="الخبز واللبن">
                     <source src="videos/vol6-bread-laban.mp4" type="video/mp4">
@@ -2596,10 +2600,10 @@
               </div>
             </li>
             <li class="vitem">
-              <button class="vitem__btn" type="button" aria-expanded="false" aria-controls="vp-24">
+              <button class="vitem__btn" type="button" aria-expanded="false" aria-controls="vp-23">
                 <span class="vitem__play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l11-6.5z"/></svg></span><span class="vitem__title">القروص</span><span class="vitem__dur">٢:٢٤</span><svg class="vitem__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
               </button>
-              <div class="vitem__panel" id="vp-24" hidden>
+              <div class="vitem__panel" id="vp-23" hidden>
                 <div class="vcard__frame">
                   <video controls preload="none" playsinline poster="posters/vol6-qurus.jpg" aria-label="القروص">
                     <source src="videos/vol6-qurus.mp4" type="video/mp4">
@@ -2609,10 +2613,10 @@
               </div>
             </li>
             <li class="vitem">
-              <button class="vitem__btn" type="button" aria-expanded="false" aria-controls="vp-25">
+              <button class="vitem__btn" type="button" aria-expanded="false" aria-controls="vp-24">
                 <span class="vitem__play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l11-6.5z"/></svg></span><span class="vitem__title">السحناة</span><span class="vitem__dur">٢:١١</span><svg class="vitem__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
               </button>
-              <div class="vitem__panel" id="vp-25" hidden>
+              <div class="vitem__panel" id="vp-24" hidden>
                 <div class="vcard__frame">
                   <video controls preload="none" playsinline poster="posters/vol6-sahnah.jpg" aria-label="السحناة">
                     <source src="videos/vol6-sahnah.mp4" type="video/mp4">
@@ -2622,10 +2626,10 @@
               </div>
             </li>
             <li class="vitem">
-              <button class="vitem__btn" type="button" aria-expanded="false" aria-controls="vp-26">
+              <button class="vitem__btn" type="button" aria-expanded="false" aria-controls="vp-25">
                 <span class="vitem__play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l11-6.5z"/></svg></span><span class="vitem__title">البثيت</span><span class="vitem__dur">١:٤٥</span><svg class="vitem__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
               </button>
-              <div class="vitem__panel" id="vp-26" hidden>
+              <div class="vitem__panel" id="vp-25" hidden>
                 <div class="vcard__frame">
                   <video controls preload="none" playsinline poster="posters/vol6-batheeth.jpg" aria-label="البثيت">
                     <source src="videos/vol6-batheeth.mp4" type="video/mp4">
@@ -2635,10 +2639,10 @@
               </div>
             </li>
             <li class="vitem">
-              <button class="vitem__btn" type="button" aria-expanded="false" aria-controls="vp-27">
+              <button class="vitem__btn" type="button" aria-expanded="false" aria-controls="vp-26">
                 <span class="vitem__play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l11-6.5z"/></svg></span><span class="vitem__title">العرسية</span><span class="vitem__dur">٠:٤٦</span><svg class="vitem__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
               </button>
-              <div class="vitem__panel" id="vp-27" hidden>
+              <div class="vitem__panel" id="vp-26" hidden>
                 <div class="vcard__frame">
                   <video controls preload="none" playsinline poster="posters/vol6-arsiya.jpg" aria-label="العرسية">
                     <source src="videos/vol6-arsiya.mp4" type="video/mp4">
@@ -2648,10 +2652,10 @@
               </div>
             </li>
             <li class="vitem">
-              <button class="vitem__btn" type="button" aria-expanded="false" aria-controls="vp-28">
+              <button class="vitem__btn" type="button" aria-expanded="false" aria-controls="vp-27">
                 <span class="vitem__play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l11-6.5z"/></svg></span><span class="vitem__title">قبولي لحم</span><span class="vitem__dur">١:٥٥</span><svg class="vitem__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
               </button>
-              <div class="vitem__panel" id="vp-28" hidden>
+              <div class="vitem__panel" id="vp-27" hidden>
                 <div class="vcard__frame">
                   <video controls preload="none" playsinline poster="posters/vol6-qabooli-lahm.jpg" aria-label="قبولي لحم">
                     <source src="videos/vol6-qabooli-lahm.mp4" type="video/mp4">
@@ -2661,10 +2665,10 @@
               </div>
             </li>
             <li class="vitem">
-              <button class="vitem__btn" type="button" aria-expanded="false" aria-controls="vp-29">
+              <button class="vitem__btn" type="button" aria-expanded="false" aria-controls="vp-28">
                 <span class="vitem__play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l11-6.5z"/></svg></span><span class="vitem__title">الثريد</span><span class="vitem__dur">١:٢٧</span><svg class="vitem__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
               </button>
-              <div class="vitem__panel" id="vp-29" hidden>
+              <div class="vitem__panel" id="vp-28" hidden>
                 <div class="vcard__frame">
                   <video controls preload="none" playsinline poster="posters/vol6-tharid.jpg" aria-label="الثريد">
                     <source src="videos/vol6-tharid.mp4" type="video/mp4">
@@ -2674,10 +2678,10 @@
               </div>
             </li>
             <li class="vitem">
-              <button class="vitem__btn" type="button" aria-expanded="false" aria-controls="vp-30">
+              <button class="vitem__btn" type="button" aria-expanded="false" aria-controls="vp-29">
                 <span class="vitem__play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l11-6.5z"/></svg></span><span class="vitem__title">الكامي</span><span class="vitem__dur">١:١٨</span><svg class="vitem__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
               </button>
-              <div class="vitem__panel" id="vp-30" hidden>
+              <div class="vitem__panel" id="vp-29" hidden>
                 <div class="vcard__frame">
                   <video controls preload="none" playsinline poster="posters/vol6-kami.jpg" aria-label="الكامي">
                     <source src="videos/vol6-kami.mp4" type="video/mp4">
@@ -2687,10 +2691,10 @@
               </div>
             </li>
             <li class="vitem">
-              <button class="vitem__btn" type="button" aria-expanded="false" aria-controls="vp-31">
+              <button class="vitem__btn" type="button" aria-expanded="false" aria-controls="vp-30">
                 <span class="vitem__play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l11-6.5z"/></svg></span><span class="vitem__title">القهوى</span><span class="vitem__dur">٣:٢٦</span><svg class="vitem__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
               </button>
-              <div class="vitem__panel" id="vp-31" hidden>
+              <div class="vitem__panel" id="vp-30" hidden>
                 <div class="vcard__frame">
                   <video controls preload="none" playsinline poster="posters/vol6-qahwa.jpg" aria-label="القهوى">
                     <source src="videos/vol6-qahwa.mp4" type="video/mp4">
@@ -2700,10 +2704,10 @@
               </div>
             </li>
             <li class="vitem">
-              <button class="vitem__btn" type="button" aria-expanded="false" aria-controls="vp-32">
+              <button class="vitem__btn" type="button" aria-expanded="false" aria-controls="vp-31">
                 <span class="vitem__play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l11-6.5z"/></svg></span><span class="vitem__title">الهريس</span><span class="vitem__dur">٠:٥٤</span><svg class="vitem__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
               </button>
-              <div class="vitem__panel" id="vp-32" hidden>
+              <div class="vitem__panel" id="vp-31" hidden>
                 <div class="vcard__frame">
                   <video controls preload="none" playsinline poster="posters/vol6-hareis.jpg" aria-label="الهريس">
                     <source src="videos/vol6-hareis.mp4" type="video/mp4">
@@ -2720,15 +2724,15 @@
             </button></h4>
             <ul class="vlist" id="vl-6-2" hidden>
             <li class="vsub">
-              <h5 class="vsub__h"><button class="vsub__toggle tg" type="button" aria-expanded="false" aria-controls="vs-34">
+              <h5 class="vsub__h"><button class="vsub__toggle tg" type="button" aria-expanded="false" aria-controls="vs-33">
                 <span class="vsub__title">لباس الزينة</span><span class="vol__status vol__status--on">فيديو واحد</span><svg class="tg__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
               </button></h5>
-              <ul class="vlist vlist--nested" id="vs-34" hidden>
+              <ul class="vlist vlist--nested" id="vs-33" hidden>
             <li class="vitem">
-              <button class="vitem__btn" type="button" aria-expanded="false" aria-controls="vp-33">
+              <button class="vitem__btn" type="button" aria-expanded="false" aria-controls="vp-32">
                 <span class="vitem__play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l11-6.5z"/></svg></span><span class="vitem__title">الخنجر</span><span class="vitem__dur">٠:٥٢</span><svg class="vitem__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
               </button>
-              <div class="vitem__panel" id="vp-33" hidden>
+              <div class="vitem__panel" id="vp-32" hidden>
                 <div class="vcard__frame">
                   <video controls preload="none" playsinline poster="posters/vol6-khanjar.jpg" aria-label="الخنجر">
                     <source src="videos/vol6-khanjar.mp4" type="video/mp4">
@@ -2747,10 +2751,10 @@
             </button></h4>
             <ul class="vlist" id="vl-6-3" hidden>
             <li class="vitem">
-              <button class="vitem__btn" type="button" aria-expanded="false" aria-controls="vp-35">
+              <button class="vitem__btn" type="button" aria-expanded="false" aria-controls="vp-34">
                 <span class="vitem__play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l11-6.5z"/></svg></span><span class="vitem__title">غزل الصوف</span><span class="vitem__dur">٢:١٦</span><svg class="vitem__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
               </button>
-              <div class="vitem__panel" id="vp-35" hidden>
+              <div class="vitem__panel" id="vp-34" hidden>
                 <div class="vcard__frame">
                   <video controls preload="none" playsinline poster="posters/vol6-ghazl.jpg" aria-label="غزل الصوف">
                     <source src="videos/vol6-ghazl.mp4" type="video/mp4">
@@ -2767,10 +2771,10 @@
             </button></h4>
             <ul class="vlist" id="vl-6-4" hidden>
             <li class="vitem">
-              <button class="vitem__btn" type="button" aria-expanded="false" aria-controls="vp-36">
+              <button class="vitem__btn" type="button" aria-expanded="false" aria-controls="vp-35">
                 <span class="vitem__play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l11-6.5z"/></svg></span><span class="vitem__title">العيد</span><span class="vitem__dur">٣:٠٢</span><svg class="vitem__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
               </button>
-              <div class="vitem__panel" id="vp-36" hidden>
+              <div class="vitem__panel" id="vp-35" hidden>
                 <div class="vcard__frame">
                   <video controls preload="none" playsinline poster="posters/vol6-eid.jpg" aria-label="العيد">
                     <source src="videos/vol6-eid.mp4" type="video/mp4">
@@ -2787,10 +2791,10 @@
             </button></h4>
             <ul class="vlist" id="vl-6-5" hidden>
             <li class="vitem">
-              <button class="vitem__btn" type="button" aria-expanded="false" aria-controls="vp-37">
+              <button class="vitem__btn" type="button" aria-expanded="false" aria-controls="vp-36">
                 <span class="vitem__play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l11-6.5z"/></svg></span><span class="vitem__title">ألعاب شعبية</span><span class="vitem__dur">٢:٠٣</span><svg class="vitem__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
               </button>
-              <div class="vitem__panel" id="vp-37" hidden>
+              <div class="vitem__panel" id="vp-36" hidden>
                 <div class="vcard__frame">
                   <video controls preload="none" playsinline poster="posters/vol6-folk-games.jpg" aria-label="ألعاب شعبية">
                     <source src="videos/vol6-folk-games.mp4" type="video/mp4">
@@ -2800,10 +2804,10 @@
               </div>
             </li>
             <li class="vitem">
-              <button class="vitem__btn" type="button" aria-expanded="false" aria-controls="vp-38">
+              <button class="vitem__btn" type="button" aria-expanded="false" aria-controls="vp-37">
                 <span class="vitem__play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l11-6.5z"/></svg></span><span class="vitem__title">مناطحة الثيران</span><span class="vitem__dur">١:٥٧</span><svg class="vitem__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
               </button>
-              <div class="vitem__panel" id="vp-38" hidden>
+              <div class="vitem__panel" id="vp-37" hidden>
                 <div class="vcard__frame">
                   <video controls preload="none" playsinline poster="posters/vol6-bulls.jpg" aria-label="مناطحة الثيران">
                     <source src="videos/vol6-bulls.mp4" type="video/mp4">
@@ -2813,10 +2817,10 @@
               </div>
             </li>
             <li class="vitem">
-              <button class="vitem__btn" type="button" aria-expanded="false" aria-controls="vp-39">
+              <button class="vitem__btn" type="button" aria-expanded="false" aria-controls="vp-38">
                 <span class="vitem__play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l11-6.5z"/></svg></span><span class="vitem__title">الحواليس</span><span class="vitem__dur">١:٤٩</span><svg class="vitem__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
               </button>
-              <div class="vitem__panel" id="vp-39" hidden>
+              <div class="vitem__panel" id="vp-38" hidden>
                 <div class="vcard__frame">
                   <video controls preload="none" playsinline poster="posters/vol6-hawalees.jpg" aria-label="الحواليس">
                     <source src="videos/vol6-hawalees.mp4" type="video/mp4">
@@ -2833,10 +2837,10 @@
             </button></h4>
             <ul class="vlist" id="vl-6-6" hidden>
             <li class="vitem">
-              <button class="vitem__btn" type="button" aria-expanded="false" aria-controls="vp-40">
+              <button class="vitem__btn" type="button" aria-expanded="false" aria-controls="vp-39">
                 <span class="vitem__play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l11-6.5z"/></svg></span><span class="vitem__title">المديمة</span><span class="vitem__dur">١:٢٢</span><svg class="vitem__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
               </button>
-              <div class="vitem__panel" id="vp-40" hidden>
+              <div class="vitem__panel" id="vp-39" hidden>
                 <div class="vcard__frame">
                   <video controls preload="none" playsinline poster="posters/vol6-madima.jpg" aria-label="المديمة">
                     <source src="videos/vol6-madima.mp4" type="video/mp4">
@@ -2936,6 +2940,13 @@
   <div class="toast" role="status" aria-live="polite">
     <span class="toast__dot" aria-hidden="true">✦</span>
     <span class="toast__text"></span>
+  </div>
+
+  <div class="vmodal" id="vmodal" role="dialog" aria-modal="true" aria-label="الفيديو الافتتاحي" hidden>
+    <div class="vmodal__box">
+      <button class="vmodal__close" type="button" aria-label="إغلاق">✕</button>
+      <video controls playsinline preload="none" poster="posters/launch.jpg"><source src="videos/launch.mp4" type="video/mp4"></video>
+    </div>
   </div>
 
   <script>
@@ -3196,6 +3207,21 @@
           if (Math.abs(dx) > 50) go(dx > 0 ? cur + 1 : cur - 1);
         }, { passive: true });
         render();
+      })();
+
+      (function () {
+        const m = document.getElementById('vmodal'), btn = document.getElementById('openLaunch');
+        if (!m || !btn) return;
+        const v = m.querySelector('video');
+        function close() { m.hidden = true; v.pause(); document.body.style.overflow = ''; btn.focus(); }
+        btn.addEventListener('click', function () {
+          const band = document.querySelector('.launchband video'); if (band) band.pause();
+          m.hidden = false; document.body.style.overflow = 'hidden';
+          v.muted = false; const pr = v.play(); if (pr && pr.catch) pr.catch(function () {});
+        });
+        m.querySelector('.vmodal__close').addEventListener('click', close);
+        m.addEventListener('click', function (e) { if (e.target === m) close(); });
+        document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !m.hidden) close(); });
       })();
     })();
   </script>
