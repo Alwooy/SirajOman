@@ -1727,7 +1727,10 @@
     .ministry__title { color: #3A2A1B; font-weight: 700; }
     .ministry__line--school { color: #8A6330; font-weight: 700; }
     .ministry__logos { display: flex; align-items: center; gap: 12px; margin-bottom: 8px; }
-    .ministry__logos img { height: clamp(48px, 5.6vw, 76px); width: auto; display: block; object-fit: contain; }
+    .ministry__logos { gap: 14px; }
+    .ministry__logos img { display: block; object-fit: contain; }
+    .ministry__logos img:first-child { height: clamp(52px, 5.6vw, 74px); width: auto; }
+    .ministry__logos img:last-child { --lh: clamp(38px, 4vw, 54px); height: var(--lh); width: calc(var(--lh) * 2.8); object-fit: cover; object-position: 50% 50%; }
     .seal {
       border-color: rgba(154, 117, 63, .55);
       background: rgba(255, 251, 242, .72);
