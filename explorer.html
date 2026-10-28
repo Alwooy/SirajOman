@@ -5,8 +5,6 @@
 <style>
 :root{--bg:#f6f1e4;--card:#fff;--tx:#2a2218;--mu:#6d6454;--bd:#e4dac4;--gold:#c9a24b;--red:#c8312b;--grn:#2f8f4e;
 box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#141a1c;--card:#1d2629;--tx:#f0ebe0;--mu:#a9b3b1;--bd:#2e3b3f}}
-:root[data-theme="dark"]{--bg:#141a1c;--card:#1d2629;--tx:#f0ebe0;--mu:#a9b3b1;--bd:#2e3b3f}
 html{scroll-padding-top:env(safe-area-inset-top,0px)}
 body{margin:0;background:var(--bg);color:var(--tx);font-family:"Tajawal","Segoe UI",Tahoma,system-ui,sans-serif;line-height:1.7}
 .w{max-width:640px;margin:0 auto;padding:0 14px 50px}
@@ -47,7 +45,7 @@ summary{font-weight:800;cursor:pointer}details li{margin:4px 0}
 .cert h2{margin:4px 0;font-size:26px}.cert input{font:inherit;font-size:20px;text-align:center;width:80%;border:0;border-bottom:2px solid var(--gold);background:transparent;color:inherit;margin:8px 0}
 .min{font-size:13px;color:var(--mu);font-weight:700}.pass{background:var(--card);border:2px solid var(--gold);border-radius:20px;padding:4px 12px 10px;margin:12px 0}.pass .pp{margin:4px 0 0}.pp small{line-height:1.2;margin-top:2px}
 .ft{text-align:center;color:var(--mu);font-size:13px;margin-top:22px}
-</style></head><body><div style="max-width:640px;margin:0 auto;padding:10px 14px"><a href="index.html#sections" style="color:inherit;font-weight:700;text-decoration:none;font-size:14px">← العودة إلى سراج عُمان</a></div><div class="w"><div class="fl"></div><div id="app"></div></div>
+body{background:linear-gradient(rgba(251,246,236,.94),rgba(250,244,232,.95)),url(assets/bg-page.jpg) center/cover fixed}</style></head><body><div style="max-width:640px;margin:0 auto;padding:10px 14px"><a href="index.html#sections" style="color:inherit;font-weight:700;text-decoration:none;font-size:14px">← العودة إلى سراج عُمان</a></div><div class="w"><div class="fl"></div><div id="app"></div></div>
 <script>
 const $=i=>document.getElementById(i);
 const ST=[
@@ -73,7 +71,7 @@ const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(P))}catch(e){}};
 let cur=null,tab="i",qi=0,pk=null,sc=0,op={},fin=false;
 const stamped=s=>(P.best[s.k]||0)>=4;
 function home(){const n=ST.filter(stamped).length,tot=ST.reduce((a,s)=>a+(P.best[s.k]||0),0);
-let h='<div class="hero"><div class="min">سلطنة عُمان • وزارة التربية والتعليم</div><div class="sc">🏰🌴⛵🏔️</div><h1>مُستكشف ضَيّان العُماني</h1><p>من الموسوعة العُمانية نكتشف عُمان، بالعلم نبني المستقبل</p><p>مدرسة ضيان للتعليم الأساسي (1–4) · المجال الثاني: العلوم والرياضيات</p><span class="tag">معًا .. نكتشف · نبني .. نلهم</span></div>';
+let h='<div class="hero"><div class="min">سلطنة عُمان • وزارة التعليم</div><div class="sc">🏰🌴⛵🏔️</div><h1>مُستكشف ضَيّان العُماني</h1><p>من الموسوعة العُمانية نكتشف عُمان، بالعلم نبني المستقبل</p><p>مدرسة ضيان للتعليم الأساسي (1–4) · المجال الثاني: العلوم والرياضيات</p><span class="tag">معًا .. نكتشف · نبني .. نلهم</span></div>';
 h+='<div class="pass"><div class="bar"><b>🛂 جواز مستكشف عُمان</b><span>'+n+' / 5 أختام</span></div><div class="pp">'+ST.map(s=>'<div class="'+(stamped(s)?"on":"")+'" style="--c:'+s.c+'">'+(stamped(s)?"✅":s.ic)+'<small>'+s.n+'</small></div>').join("")+'</div></div>';
 h+='<div class="js">'+ST.map(s=>'<button class="st" data-k="'+s.k+'" style="--c:'+s.c+'"><i>'+s.ic+'</i><div><b>'+s.n+'</b><span>'+s.d+'</span>'+(P.best[s.k]!=null?'<br><span>'+"⭐".repeat(P.best[s.k])+" ("+P.best[s.k]+"/5)</span>":"")+'</div></button>').join("")+'</div>';
 if(n==5&&!P.fin)h+='<div class="q" style="margin:14px 0"><small>🛂 السؤال الختامي</small><h3>ما الشعار الختامي لمشروع مستكشف ضيان؟</h3>'+["مستقبل بلا علم","معلومة موثوقة، جيل واعٍ، مستقبل مبتكر","اللعب أولًا","السرعة فقط"].map((o,i)=>'<button class="o" data-f="'+(i==1?1:0)+'">'+o+'</button>').join("")+'</div>';
