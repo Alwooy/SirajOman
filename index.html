@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>سراج عُمان | المسابقات الرئيسية للموسوعة العُمانية للناشئة</title>
-  <meta name="description" content="سراج عُمان — منصة المسابقات الرئيسية للموسوعة العُمانية للناشئة، وتجمع المقالات والعروض والأعمال الفنية والمسابقات في خمس مسارات.">
+  <meta name="description" content="سراج عُمان — منصة المسابقات الرئيسية للموسوعة العُمانية للناشئة، وتجمع المقالات والعروض والأعمال الفنية والمسابقات في خمسة مسارات.">
   <meta name="theme-color" content="#1B110A">
   <meta property="og:title" content="سراج عُمان | المسابقات الرئيسية للموسوعة العُمانية للناشئة">
   <meta property="og:description" content="ذاكرةٌ تُروى، وإبداعٌ يُورَّث.">
@@ -1935,6 +1935,17 @@
     .plan__quote { margin: clamp(24px, 4vw, 40px) auto 0; max-width: 760px; padding: clamp(20px, 3vw, 32px); text-align: center; border-block: 2px solid rgba(154, 117, 63, .5); }
     .plan__quote p { margin: 0; font-family: var(--title); font-weight: 700; font-size: clamp(1.15rem, 2.4vw, 1.5rem); line-height: 2; color: #6B4A22; }
     @media (max-width: 560px) { .plan__step { grid-template-columns: 1fr; } }
+    /* plan: school-accounts gallery */
+    .pgal { margin-top: 4px; }
+    .cflow--plan .cflow__stage { height: clamp(380px, 62vw, 500px); --step: clamp(46px, 10vw, 120px); }
+    .cflow--plan .cflow__item { width: clamp(170px, 28vw, 250px); height: clamp(330px, 56vw, 470px); padding: 6px; }
+    .plan .cflow__title { color: #3A2A1B; font-size: 1.05rem; }
+    .plan .cflow__src { color: #7A5528; }
+    .plan .cflow__cap { min-height: 76px; }
+    .plan .lightbox__img { max-height: 84vh; }
+    .plan__poster a { display: inline-block; }
+    .arts.plan { overflow-x: clip; }
+    .cflow--plan { overflow: visible; }
   </style>
 </head>
 <body>
@@ -1997,7 +2008,7 @@
         </div>
 
         <p class="hero__lead">ذاكرةٌ تُروى، وإبداعٌ يُورَّث.</p>
-        <p class="hero__sub">منصةٌ معرفية تنبثق من الموسوعة العُمانية للناشئة، وتفتح دروبًا للتنافس والإبداع عبر خمس مسارات.</p>
+        <p class="hero__sub">منصةٌ معرفية تنبثق من الموسوعة العُمانية للناشئة، وتفتح دروبًا للتنافس والإبداع عبر خمسة مسارات.</p>
 
         <div class="hero__actions">
           <a class="btn btn--gold" href="#sections">
@@ -2064,7 +2075,25 @@
             <div class="plan__body">
               <h3 class="plan__h">الإعلان عبر حسابات المدرسة</h3>
               <p class="plan__p">الإعلان عن مسابقة سراج عُمان عبر حسابات المدرسة.</p>
-              <div class="plan__shots"><a class="plan__shot" href="plan/shot-1.jpg" target="_blank" rel="noopener"><img src="plan/shot-1.jpg" alt="لقطة من حسابات المدرسة — الإعلان عن مسابقة سراج عُمان (1)" loading="lazy" decoding="async"></a><a class="plan__shot" href="plan/shot-2.jpg" target="_blank" rel="noopener"><img src="plan/shot-2.jpg" alt="لقطة من حسابات المدرسة — الإعلان عن مسابقة سراج عُمان (2)" loading="lazy" decoding="async"></a><a class="plan__shot" href="plan/shot-3.jpg" target="_blank" rel="noopener"><img src="plan/shot-3.jpg" alt="لقطة من حسابات المدرسة — الإعلان عن مسابقة سراج عُمان (3)" loading="lazy" decoding="async"></a><a class="plan__shot" href="plan/shot-4.jpg" target="_blank" rel="noopener"><img src="plan/shot-4.jpg" alt="لقطة من حسابات المدرسة — الإعلان عن مسابقة سراج عُمان (4)" loading="lazy" decoding="async"></a><a class="plan__shot" href="plan/shot-5.jpg" target="_blank" rel="noopener"><img src="plan/shot-5.jpg" alt="لقطة من حسابات المدرسة — الإعلان عن مسابقة سراج عُمان (5)" loading="lazy" decoding="async"></a><a class="plan__shot" href="plan/shot-6.jpg" target="_blank" rel="noopener"><img src="plan/shot-6.jpg" alt="لقطة من حسابات المدرسة — الإعلان عن مسابقة سراج عُمان (6)" loading="lazy" decoding="async"></a><a class="plan__shot" href="plan/shot-7.jpg" target="_blank" rel="noopener"><img src="plan/shot-7.jpg" alt="لقطة من حسابات المدرسة — الإعلان عن مسابقة سراج عُمان (7)" loading="lazy" decoding="async"></a><a class="plan__shot" href="plan/shot-8.jpg" target="_blank" rel="noopener"><img src="plan/shot-8.jpg" alt="لقطة من حسابات المدرسة — الإعلان عن مسابقة سراج عُمان (8)" loading="lazy" decoding="async"></a></div>
+              
+              <div class="pgal" id="pgal">
+                <div class="cflow cflow--plan" role="region" aria-roledescription="معرض" aria-label="لقطات الإعلان عبر حسابات المدرسة">
+                  <div class="cflow__stage">
+              <button class="cflow__item" type="button" data-title="الإعلان عبر حسابات المدرسة" data-src="لقطة ١" aria-label="لقطة ١"><img src="plan/shot-1.jpg" alt="لقطة من حسابات المدرسة — الإعلان عن مسابقة سراج عُمان (1)" loading="lazy" decoding="async" draggable="false"></button>
+              <button class="cflow__item" type="button" data-title="الإعلان عبر حسابات المدرسة" data-src="لقطة ٢" aria-label="لقطة ٢"><img src="plan/shot-2.jpg" alt="لقطة من حسابات المدرسة — الإعلان عن مسابقة سراج عُمان (2)" loading="lazy" decoding="async" draggable="false"></button>
+              <button class="cflow__item" type="button" data-title="الإعلان عبر حسابات المدرسة" data-src="لقطة ٣" aria-label="لقطة ٣"><img src="plan/shot-3.jpg" alt="لقطة من حسابات المدرسة — الإعلان عن مسابقة سراج عُمان (3)" loading="lazy" decoding="async" draggable="false"></button>
+              <button class="cflow__item" type="button" data-title="الإعلان عبر حسابات المدرسة" data-src="لقطة ٤" aria-label="لقطة ٤"><img src="plan/shot-4.jpg" alt="لقطة من حسابات المدرسة — الإعلان عن مسابقة سراج عُمان (4)" loading="lazy" decoding="async" draggable="false"></button>
+              <button class="cflow__item" type="button" data-title="الإعلان عبر حسابات المدرسة" data-src="لقطة ٥" aria-label="لقطة ٥"><img src="plan/shot-5.jpg" alt="لقطة من حسابات المدرسة — الإعلان عن مسابقة سراج عُمان (5)" loading="lazy" decoding="async" draggable="false"></button>
+              <button class="cflow__item" type="button" data-title="الإعلان عبر حسابات المدرسة" data-src="لقطة ٦" aria-label="لقطة ٦"><img src="plan/shot-6.jpg" alt="لقطة من حسابات المدرسة — الإعلان عن مسابقة سراج عُمان (6)" loading="lazy" decoding="async" draggable="false"></button>
+              <button class="cflow__item" type="button" data-title="الإعلان عبر حسابات المدرسة" data-src="لقطة ٧" aria-label="لقطة ٧"><img src="plan/shot-7.jpg" alt="لقطة من حسابات المدرسة — الإعلان عن مسابقة سراج عُمان (7)" loading="lazy" decoding="async" draggable="false"></button>
+              <button class="cflow__item" type="button" data-title="الإعلان عبر حسابات المدرسة" data-src="لقطة ٨" aria-label="لقطة ٨"><img src="plan/shot-8.jpg" alt="لقطة من حسابات المدرسة — الإعلان عن مسابقة سراج عُمان (8)" loading="lazy" decoding="async" draggable="false"></button>
+                  </div>
+                  <button class="cflow__nav cflow__prev" type="button" aria-label="اللقطة السابقة">→</button>
+                  <button class="cflow__nav cflow__next" type="button" aria-label="اللقطة التالية">←</button>
+                </div>
+                <div class="cflow__cap" aria-live="polite"><h3 class="cflow__title"></h3><p class="cflow__src"></p><p class="cflow__count"></p></div>
+                <div class="cflow__dots"><button class="cflow__dot" type="button" aria-label="لقطة ١"></button><button class="cflow__dot" type="button" aria-label="لقطة ٢"></button><button class="cflow__dot" type="button" aria-label="لقطة ٣"></button><button class="cflow__dot" type="button" aria-label="لقطة ٤"></button><button class="cflow__dot" type="button" aria-label="لقطة ٥"></button><button class="cflow__dot" type="button" aria-label="لقطة ٦"></button><button class="cflow__dot" type="button" aria-label="لقطة ٧"></button><button class="cflow__dot" type="button" aria-label="لقطة ٨"></button></div>
+              </div>
             </div>
           </li>
           <li class="plan__step reveal">
@@ -2072,7 +2101,7 @@
             <div class="plan__body">
               <h3 class="plan__h">الإعلان لأولياء الأمور</h3>
               <p class="plan__p">الإعلان عن المسابقة لأولياء الأمور، وتعريفهم بأهدافها وآلية المشاركة فيها.</p>
-              <figure class="plan__poster"><a href="assets/announcement.jpg" target="_blank" rel="noopener"><img src="assets/announcement.jpg" alt="إعلان مسابقة «من الموسوعة إلى الإبداع»" onerror="this.parentElement.hidden=true;this.closest('.plan__poster').classList.add('is-missing')"></a><figcaption class="plan__soon">صورة الإعلان — قريبًا</figcaption></figure>
+              <figure class="plan__poster"><a href="assets/announcement.jpg" target="_blank" rel="noopener"><img src="assets/announcement.jpg" alt="إعلان مسابقة «من الموسوعة إلى الإبداع» لأولياء الأمور" loading="lazy" decoding="async"></a></figure>
             </div>
           </li>
         </ol>
@@ -2080,6 +2109,13 @@
           <p>«إنجازنا هذا قد كُتب بقلوبٍ آمنت، وأيادٍ تعاونت، وأرواحٍ أخلصت… فكان الوطن أجمل ما في الحكاية!»</p>
         </blockquote>
       </div>
+                <div class="lightbox" id="pg-lb" role="dialog" aria-modal="true" aria-label="عرض اللقطة" hidden>
+                  <button class="lightbox__close" type="button" aria-label="إغلاق">×</button>
+                  <button class="lightbox__nav lightbox__prev" type="button" aria-label="اللقطة السابقة">→</button>
+                  <figure class="lightbox__fig"><img class="lightbox__img" alt=""><figcaption class="lightbox__cap"></figcaption></figure>
+                  <button class="lightbox__nav lightbox__next" type="button" aria-label="اللقطة التالية">←</button>
+                </div>
+
     </section>
 
     <section class="launchband" id="launch" aria-labelledby="launch-title">
@@ -2106,7 +2142,7 @@
       <div class="container">
         <div class="section-head reveal">
           <span class="eyebrow">أقسام المنصة</span>
-          <h2 class="section-title" id="sections-title">خمس مسارات في <span>سراج عُمان</span></h2>
+          <h2 class="section-title" id="sections-title">خمسة مسارات في <span>سراج عُمان</span></h2>
           <p class="section-lead">من المقالة إلى العرض، ومن الصورة إلى المسابقة؛ اختر مسارك واكتشف ما تُخبّئه عُمان من معرفةٍ وجمال.</p>
           <div class="ornament ornament--dark" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="currentColor">
@@ -3881,10 +3917,10 @@
         const root = document.getElementById('cflow');
         if (!root) return;
         const items = Array.from(root.querySelectorAll('.cflow__item'));
-        const dots = Array.from(document.querySelectorAll('.cflow__dot'));
-        const titleEl = document.querySelector('.cflow__title');
-        const srcEl = document.querySelector('.cflow__src');
-        const countEl = document.querySelector('.cflow__count');
+        const dots = Array.from(root.closest('.arts__inner').querySelectorAll('.cflow__dot'));
+        const titleEl = root.closest('.arts__inner').querySelector('.cflow__title');
+        const srcEl = root.closest('.arts__inner').querySelector('.cflow__src');
+        const countEl = root.closest('.arts__inner').querySelector('.cflow__count');
         const lb = document.getElementById('lightbox');
         const lbImg = lb.querySelector('.lightbox__img');
         const lbCap = lb.querySelector('.lightbox__cap');
@@ -3976,5 +4012,61 @@
       })();
     })();
   </script>
+
+<script>
+(function () {
+  const root = document.getElementById('pgal');
+  if (!root) return;
+  const items = Array.from(root.querySelectorAll('.cflow__item'));
+  const dots = Array.from(root.querySelectorAll('.cflow__dot'));
+  const titleEl = root.querySelector('.cflow__title'), srcEl = root.querySelector('.cflow__src'), countEl = root.querySelector('.cflow__count');
+  const lb = document.getElementById('pg-lb'), lbImg = lb.querySelector('.lightbox__img'), lbCap = lb.querySelector('.lightbox__cap');
+  const toAr = function (n) { return String(n).replace(/\d/g, function (d) { return '٠١٢٣٤٥٦٧٨٩'[d]; }); };
+  let cur = 0, sx = null, opener = null;
+  function render() {
+    items.forEach(function (it, i) {
+      const p = i - cur, a = Math.abs(p);
+      it.style.setProperty('--p', p); it.style.setProperty('--a', Math.min(a, 4));
+      it.classList.toggle('is-active', p === 0); it.classList.toggle('is-far', a > 3);
+      it.tabIndex = p === 0 ? 0 : -1;
+    });
+    dots.forEach(function (d, i) { d.setAttribute('aria-selected', i === cur ? 'true' : 'false'); });
+    titleEl.textContent = items[cur].dataset.title; srcEl.textContent = items[cur].dataset.src;
+    countEl.textContent = toAr(cur + 1) + ' / ' + toAr(items.length);
+    if (!lb.hidden) fillLb();
+  }
+  function fillLb() {
+    const im = items[cur].querySelector('img');
+    lbImg.src = im.currentSrc || im.src; lbImg.alt = im.alt;
+    lbCap.textContent = items[cur].dataset.title + ' — ' + items[cur].dataset.src;
+  }
+  function go(k) { cur = (k + items.length) % items.length; render(); }
+  function openLb() { opener = document.activeElement; lb.hidden = false; fillLb(); document.body.style.overflow = 'hidden'; lb.querySelector('.lightbox__close').focus(); }
+  function closeLb() { lb.hidden = true; document.body.style.overflow = ''; if (opener && opener.focus) opener.focus(); }
+  items.forEach(function (it, i) { it.addEventListener('click', function () { if (i === cur) openLb(); else go(i); }); });
+  dots.forEach(function (d, i) { d.addEventListener('click', function () { go(i); }); });
+  root.querySelector('.cflow__prev').addEventListener('click', function () { go(cur - 1); });
+  root.querySelector('.cflow__next').addEventListener('click', function () { go(cur + 1); });
+  root.addEventListener('keydown', function (e) {
+    if (!lb.hidden) return;
+    if (e.key === 'ArrowRight') { go(cur - 1); e.preventDefault(); } else if (e.key === 'ArrowLeft') { go(cur + 1); e.preventDefault(); }
+  });
+  const stage = root.querySelector('.cflow__stage');
+  stage.addEventListener('touchstart', function (e) { sx = e.touches[0].clientX; }, { passive: true });
+  stage.addEventListener('touchend', function (e) { if (sx === null) return; const dx = e.changedTouches[0].clientX - sx; sx = null; if (Math.abs(dx) > 40) go(dx > 0 ? cur + 1 : cur - 1); }, { passive: true });
+  lb.querySelector('.lightbox__close').addEventListener('click', closeLb);
+  lb.querySelector('.lightbox__prev').addEventListener('click', function () { go(cur - 1); });
+  lb.querySelector('.lightbox__next').addEventListener('click', function () { go(cur + 1); });
+  lb.addEventListener('click', function (e) { if (e.target === lb) closeLb(); });
+  document.addEventListener('keydown', function (e) {
+    if (lb.hidden) return;
+    if (e.key === 'Escape') closeLb(); else if (e.key === 'ArrowRight') go(cur - 1); else if (e.key === 'ArrowLeft') go(cur + 1);
+  });
+  let ltx = null;
+  lb.addEventListener('touchstart', function (e) { ltx = e.touches[0].clientX; }, { passive: true });
+  lb.addEventListener('touchend', function (e) { if (ltx === null) return; const dx = e.changedTouches[0].clientX - ltx; ltx = null; if (Math.abs(dx) > 50) go(dx > 0 ? cur + 1 : cur - 1); }, { passive: true });
+  render();
+})();
+</script>
 </body>
 </html>
