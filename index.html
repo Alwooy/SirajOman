@@ -2043,8 +2043,18 @@
               <h3 class="plan__h">اجتماع الفريق</h3>
               <p class="plan__p">عقد اجتماع لأعضاء الفريق ومناقشة آلية تنفيذ الأعمال والمهام المتعلقة بالمسابقة، وتوزيع الأدوار بين أعضاء الفريق.</p>
               <ul class="vlist vlist--wide">
-            <li class="vitem vitem--soon">
-              <div class="vitem__btn"><span class="vitem__play" aria-hidden="true">✦</span><span class="vitem__title">فيديو الاجتماع</span><span class="vitem__dur">قريبًا</span></div>
+            <li class="vitem">
+              <button class="vitem__btn" type="button" aria-expanded="false" aria-controls="vp-81">
+                <span class="vitem__play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l11-6.5z"/></svg></span><span class="vitem__title">كواليس الاجتماع</span><span class="vitem__dur">٠:٣٩</span><svg class="vitem__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+              </button>
+              <div class="vitem__panel" id="vp-81" hidden>
+                <div class="vcard__frame">
+                  <video controls preload="none" playsinline poster="posters/plan-meeting.jpg" aria-label="كواليس الاجتماع">
+                    <source src="videos/plan-meeting.mp4" type="video/mp4">
+                    متصفحك لا يدعم تشغيل الفيديو.
+                  </video>
+                </div>
+              </div>
             </li>
               </ul>
             </div>
