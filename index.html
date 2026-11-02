@@ -1946,6 +1946,18 @@
     .plan__poster a { display: inline-block; }
     .arts.plan { overflow-x: clip; }
     .cflow--plan { overflow: visible; }
+    /* Siraj Oman interactive lamp (header) */
+    .lamp { position: relative; display: block; height: calc(var(--lh) * 1.4); aspect-ratio: 366 / 318; flex: 0 0 auto; cursor: pointer; -webkit-tap-highlight-color: transparent; }
+    .ministry__logos .lamp img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; }
+    .lamp__fl { clip-path: ellipse(7% 11% at 49% 66.5%); transform-origin: 49% 74%; filter: brightness(1.12) saturate(1.35) drop-shadow(0 0 4px rgba(255, 170, 70, .9)); animation: lampFlick 1.5s ease-in-out infinite alternate; }
+    .lamp__glow { position: absolute; left: 49%; top: 66.5%; width: 150%; aspect-ratio: 1; translate: -50% -50%; border-radius: 50%; pointer-events: none; background: radial-gradient(circle, rgba(244, 177, 80, .55), rgba(226, 123, 59, .16) 36%, transparent 64%); opacity: .55; scale: .6; animation: lampGlow 3s ease-in-out infinite alternate; transition: opacity .5s, scale .6s cubic-bezier(.2, .9, .2, 1.1); }
+    .lamp:hover .lamp__glow, .lamp:focus-visible .lamp__glow, .lamp.is-boost .lamp__glow { opacity: .95; scale: 1; animation-play-state: paused; }
+    .lamp:focus-visible { outline: 2px solid #8A6330; outline-offset: 4px; border-radius: 8px; }
+    .lamp__ember { position: absolute; left: 49%; top: 62%; width: 3px; height: 3px; border-radius: 50%; background: #E8913A; opacity: 0; pointer-events: none; animation: lampEmber var(--t) var(--w) linear infinite; }
+    @keyframes lampFlick { 0% { transform: scaleY(1) skewX(0); } 35% { transform: scaleY(1.09) skewX(-2deg); } 70% { transform: scaleY(.95) skewX(1.5deg); } 100% { transform: scaleY(1.05) skewX(-1deg); } }
+    @keyframes lampGlow { to { opacity: .8; scale: .85; } }
+    @keyframes lampEmber { 0% { transform: translate(0, 0); opacity: 0; } 12% { opacity: .9; } 100% { transform: translate(var(--dx), -34px) scale(.3); opacity: 0; } }
+    @media (prefers-reduced-motion: reduce) { .lamp__fl, .lamp__glow, .lamp__ember { animation: none; } .lamp__ember { display: none; } }
   </style>
 </head>
 <body>
@@ -1956,7 +1968,12 @@
       <div class="ministry__logos">
         <img src="assets/logo-moe.png" alt="شعار وزارة التعليم" onerror="this.remove()">
         <img src="assets/logo-mcsy.png" alt="شعار وزارة الثقافة والرياضة والشباب" onerror="this.remove()">
-        <img src="assets/logo-siraj.png" alt="شعار سراج عُمان" onerror="this.remove()">
+        <a class="lamp" href="#top" aria-label="شعار سراج عُمان" title="سراج عُمان">
+          <span class="lamp__glow" aria-hidden="true"></span>
+          <img class="lamp__base" src="assets/logo-siraj.png" alt="" onerror="this.closest('.lamp').remove()">
+          <img class="lamp__fl" src="assets/logo-siraj.png" alt="" aria-hidden="true">
+          <span class="lamp__ember" style="--dx:-6px;--t:3.4s;--w:.2s" aria-hidden="true"></span><span class="lamp__ember" style="--dx:7px;--t:4.1s;--w:1.3s" aria-hidden="true"></span><span class="lamp__ember" style="--dx:1px;--t:3.7s;--w:2.1s" aria-hidden="true"></span>
+        </a>
       </div>
       <p class="ministry__title">وزارة التعليم</p>
       <p class="ministry__line ministry__line--school">مدرسة ضيان (٤-١)</p>
@@ -4060,6 +4077,19 @@
   lb.addEventListener('touchstart', function (e) { ltx = e.touches[0].clientX; }, { passive: true });
   lb.addEventListener('touchend', function (e) { if (ltx === null) return; const dx = e.changedTouches[0].clientX - ltx; ltx = null; if (Math.abs(dx) > 50) go(dx > 0 ? cur + 1 : cur - 1); }, { passive: true });
   render();
+})();
+</script>
+
+<script>
+(function () {
+  const lamp = document.querySelector('.ministry__logos .lamp');
+  if (!lamp) return;
+  lamp.addEventListener('click', function (e) {
+    e.preventDefault();
+    lamp.classList.add('is-boost');
+    setTimeout(function () { lamp.classList.remove('is-boost'); }, 1400);
+    window.scrollTo({ top: 0, behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+  });
 })();
 </script>
 </body>
